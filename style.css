@@ -1,4 +1,9 @@
 .navbar__logo img {
-  height: 25px;
   width: 25px;
+  height: 25px;
+}
+
+.home__avatar {
+  width: 280px;
+  height: 300px;
 }
