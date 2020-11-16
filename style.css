@@ -99,6 +99,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  vertical-align: middle;
 }
 
 .navbar__menu__item {
@@ -106,6 +107,8 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  white-space: nowrap;
+  /* white-space - my work가 wrapping되는 것을 막음 */
 }
 
 .navbar__menu__item.active {
