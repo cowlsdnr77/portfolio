@@ -109,7 +109,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-pink);
   padding: 8px;
 }
 
@@ -117,10 +117,21 @@ p {
   display: flex;
 }
 
-.navbar__logo {
+.navbar__logo img {
+  vertical-align: middle;
+}
+
+.navbar__logo button {
+  font-family: inherit;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   vertical-align: middle;
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__logo button:hover {
+  background-color: var(--color-dark-pink);
 }
 
 .navbar__menu__item {
@@ -186,7 +197,7 @@ p {
 
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 100px;
   text-align: center;
   margin: auto;
 }

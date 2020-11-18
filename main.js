@@ -20,15 +20,22 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth", block:"center"});
+    scrollIntoView(link);
 });
 
-//Handle scrolling when click contact button
-const homeContact = document.querySelector('.home__contact');
-const contact = document.querySelector('#contact');
-
-homeContact.addEventListener('click', () => {   
-    contact.scrollIntoView({behavior: "smooth", block:"center"});
+//Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {  
+    scrollIntoView('#contact');
 });
+
+//Handle click on logo button on navbar
+const navbarLogoBtn = document.querySelector('.navbar__logo button');
+navbarLogoBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector); 
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}
