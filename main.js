@@ -58,7 +58,23 @@ homeContactBtn.addEventListener('mouseleave', () => {
     homeContactBtn.style.opacity = home.style.opacity;
 });
 
-
+//Handle click on the "arrow up" button
+const arrowUpBtn = document.querySelector('.arrowUp');
+arrowUpBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+//Show "arrow up" button when scrolling down
+document.addEventListener('scroll',() => {
+    if(home.style.opacity < 0){
+        arrowUpBtn.classList.add('visible'); //엘리
+        /*arrowUpBtn.style.pointerEvents = 'auto';
+        arrowUpBtn.style.opacity = 1; */ //내가 한 방식
+    } else {
+        arrowUpBtn.classList.remove('visible'); //엘리
+        /*arrowUpBtn.style.pointerEvents = 'none';
+        arrowUpBtn.style.opacity = 0; */ //내가 한 방식
+    }
+});
 
 
 function scrollIntoView(selector) {

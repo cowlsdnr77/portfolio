@@ -492,6 +492,32 @@ p {
   color: var(--color-blue);
 }
 
+/* Arrow Up */
+.arrowUp {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  transition: all var(--annimation-duration) ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arrowUp.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrowUp:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
@@ -527,5 +553,13 @@ p {
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .arrowUp {
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
   }
 }
