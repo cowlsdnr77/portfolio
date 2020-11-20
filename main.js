@@ -35,7 +35,35 @@ navbarLogoBtn.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+//Transparent home
+//home을 점점 투명하게
+//solution - 홈의 y 크기와 스크롤을 비교해서 스크롤-홈y크기 가 작아질수록 
+//opacity를 작게 만든다.
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//Transparent home Contact me button
+document.addEventListener('scroll', () => {
+    homeContactBtn.style.opacity = home.style.opacity;
+});
+
+homeContactBtn.addEventListener('mouseenter', () => {
+    homeContactBtn.style.opacity = 1;
+});
+
+homeContactBtn.addEventListener('mouseleave', () => {
+    homeContactBtn.style.opacity = home.style.opacity;
+});
+
+
+
+
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector); 
     scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+

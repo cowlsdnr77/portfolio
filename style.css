@@ -193,6 +193,7 @@ p {
 .home__contact:hover {
   transform: scale(1.1);
   border-color: var(--color-dark-pink);
+  opacity: 1;
 }
 
 /* Section common */
