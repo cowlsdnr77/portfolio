@@ -7,7 +7,6 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
-        navbarMenu.classList.remove('open');
     } else {
         navbar.classList.remove('navbar--dark');
     }
